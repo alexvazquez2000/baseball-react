@@ -2,11 +2,13 @@
 import React, {Component} from 'react';
 
 class Footer extends Component {
+    
     render () {
+        const currentYear = new Date().getFullYear();
         return (
-            <footer class="bg-light text-center text-lg-start mt-4 ">
-              <div class="text-center p-3">
-                <p>&copy; 2025 NE Baseball League. All rights reserved.</p>
+            <footer className="bg-light text-center text-lg-start mt-4 ">
+              <div className="text-center p-3">
+                <p>&copy; {currentYear} NE Baseball League. All rights reserved.</p>
               </div>
             </footer>
         );
