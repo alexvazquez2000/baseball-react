@@ -1,10 +1,11 @@
 
 import React, {Component} from 'react';
+import Heading from "./Heading";
 
 class Players extends Component {
     render () {
         return (
-            <h1>players list</h1>
+            <Heading title="players list" />
         );
     }
 }

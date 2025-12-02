@@ -12,20 +12,19 @@ const ParentList = ({ parents }) => {
 */
   const handelKeyUpFilter = (e) => {
     console.log(e.target.value);
-    
   }
   
 
   return (
     <div id="parent-list">
         <input type="text" id="search" onKeyUp={handelKeyUpFilter} placeholder="Search for names.." />
-        <table class="table table-bordered table-striped" id="filteredTable" >
+        <table className="table table-bordered table-striped" id="filteredTable" >
           <thead>
             <tr>
-              <th onclick="sortTable(0)">Name</th>
-              <th onclick="sortTable(1)">Email</th>
-              <th onclick="sortTable(2)">Phone</th>
-              <th onclick="sortTable(3)">Players</th>
+              <th onClick="sortTable(0)">Name</th>
+              <th onClick="sortTable(1)">Email</th>
+              <th onClick="sortTable(2)">Phone</th>
+              <th onClick="sortTable(3)">Players</th>
               <th>Edit</th>
             </tr>
           </thead>
@@ -36,8 +35,8 @@ const ParentList = ({ parents }) => {
                   <td>{ parent.email }</td>
                   <td>{ parent.phone }</td>
                   <td>{ parent.parent_id}</td>
-                  <td><a key={parent.parent_id}  href="#" class="btn btn-sm btn-primary">Edit</a>
-                    <a key={parent.coach_id} href="#" class="btn btn-sm btn-primary">Edit Coach</a>
+                  <td><Link to="{parent.parent_id}" class="btn btn-sm btn-primary">Edit</Link>
+                    <Link to="{parent.coach_id}" class="btn btn-sm btn-primary">Edit Coach</Link>
                    </td>
                 </tr>
             ))}
